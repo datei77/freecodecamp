@@ -2,7 +2,7 @@ import numpy as np
 
 def calculate(no):
     if len(no) != 9:
-        raise ValueError("List must contain nine numbers."
+        raise ValueError("List must contain nine numbers.")
     
     ma = np.array(no).reshape((3, 3)
     result = {
