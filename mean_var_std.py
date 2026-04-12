@@ -1,46 +1,46 @@
 import numpy as np
 
-def calculate(numbers):
-    if len(numbers) != 9:
+def calculate(no):
+    if len(no) != 9:
         raise ValueError("List must contain nine numbers."
     
-    matrix = np.array(numbers).reshape((3, 3)
+    ma = np.array(no).reshape((3, 3)
     result = {
         'mean': 
         [
-            np.mean(matrix, axis=0).tolist(),   
-            np.mean(matrix, axis=1).tolist(),   
-            float(np.mean(matrix))              
+            np.mean(ma, axis=0).tolist(),   
+            np.mean(ma, axis=1).tolist(),   
+            float(np.mean(ma))              
         ],
         'variance': 
         [
-            np.var(matrix, axis=0).tolist(),
-            np.var(matrix, axis=1).tolist(),
-            float(np.var(matrix))
+            np.var(ma, axis=0).tolist(),
+            np.var(ma, axis=1).tolist(),
+            float(np.var(ma))
         ],
         'standard deviation': 
         [
-            np.std(matrix, axis=0).tolist(),
-            np.std(matrix, axis=1).tolist(),
-            float(np.std(matrix))
+            np.std(ma, axis=0).tolist(),
+            np.std(ma, axis=1).tolist(),
+            float(np.std(ma))
         ],
         'max': 
         [
-            np.max(matrix, axis=0).tolist(),
-            np.max(matrix, axis=1).tolist(),
-            int(np.max(matrix))
+            np.max(ma, axis=0).tolist(),
+            np.max(ma, axis=1).tolist(),
+            int(np.max(ma))
         ],
         'min': 
         [
-            np.min(matrix, axis=0).tolist(),
-            np.min(matrix, axis=1).tolist(),
-            int(np.min(matrix))
+            np.min(ma, axis=0).tolist(),
+            np.min(ma, axis=1).tolist(),
+            int(np.min(ma))
         ],
         'sum': 
         [
-            np.sum(matrix, axis=0).tolist(),
-            np.sum(matrix, axis=1).tolist(),
-            int(np.sum(matrix))
+            np.sum(ma, axis=0).tolist(),
+            np.sum(ma, axis=1).tolist(),
+            int(np.sum(ma))
         ]
     }
     return result
